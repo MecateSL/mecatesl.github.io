@@ -1,165 +1,160 @@
 body {
-    background-color: rgb(255,255,204);
+    background-image: url(../media/webpattern.jpg)
 }
-#main_container {
+.wrapper {
     width: 900px;
+    margin: auto;
+}
+h1 span {
+    color: darkorange;
+}
+h1 {
+    color: white;
+    font-style: italic;
+}
+nav {
     height: auto;
-    margin: 0 auto 0 auto;
+    width: 100%
 }
-.banner {
-    width: 880px;
-    padding: 10px;
-    height: 80px;
-    background-color: rgb(0,0,0);
-    border-bottom: solid 5px rgb(255,153,0);
-    text-align: center;
-    text-transform: uppercase;
-}
-.banner h2 {
-    color: rgb(255,255,255);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-#menu {
-    width: 200px;
-    height: auto;
-    background-color: rgb(116, 116, 116);
-    float: left;
-}
-#menu ul {
-    list-style-type: none;
-    margin: 0;
+nav ul {
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
-#menu ul li a {
-    display: block;
+nav ul li {
+    border-top: 5px solid darkorange;
+    border-bottom: 5px solid darkorange;
     float: left;
-    padding: 10px;
-    width: 180px;
-    height: 20px;
-    border-bottom: dotted 1px rgb(0, 0, 0);
-    background-color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+}
+nav ul li a {
     text-decoration: none;
-    /* browser compatibility code for transition */
-    -moz-transition: all 500ms ease-in-out;
-    -webkit-transition: all 500ms ease-in-out;
-    -ms-transition: all 500ms ease-in-out;
-    -o-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;
-}
-#menu ul li a:hover {
-    background-color: #000;
-    border-left: solid 50px rgb(51,51,51);
-    widows: 130px;
-}
-.media{
-    width: 700px;
-    height: 205px;
-    background-color: black;
-    text-align: center;
-    float: right;
-}
-video {
-    width: auto;
-    height: 100%;
-}
-.textarea {
-    position: relative;
-    overflow: hidden;
-    width: 900px;
-    height: 400px;
-    clear:both;
-    float:left;
-}
-.textarea::before {
-    position: absolute;
-    z-index: -1;
-    width: 200%;
-    height: 200%;
-    top: -20%;
-    left: -20%;
-    content: "";
-    background-image: url(../media/back.JPG);
-    background-size: 100%;
-    background-position: center;
-    transition: all 750ms;
-}
-.textarea:hover::before{
-    background-size: 150%;
-    background-position: 60% 40%;
-    filter: blur(2px);
-    transform: rotate(5deg);
-}
-.box1,.box2,.box3 {
-    padding: 10px;
-    margin: 10px;
-    width: 260px;
-    height: 300px;
-    background-color: rgba(255, 255, 255, 0.8);
-    float: left;
-    border-radius: 10px;
-    text-align: center;
-}
-.textarea img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-.textarea h4 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(0,51,102);
-}
-.textarea p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 14px;
-    color: rgb(0,51,51);
-}
-.textarea2 {
-    width: 560px;
-    height: 300px;
-    padding: 10px;
-    background-color: rgb(255,255,255);
-    float: left;
-}
-.textarea2 img {
-    width: 200px;
-    height: 200px;
-    float: left;
-    margin: 10px;
-}
-.textarea2 p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 14px;
-    color: rgb(51,51,51);
-    text-align: justify
-}
-.textarea2 h4 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(0,51,0);
-}
-.contact {
-    width: 300px;
-    height: 300px;
-    padding: 10px;
-    float: left;
-    background-color: rgb(206, 206, 206);
-}.contact ul {
-    list-style-type: none;
-}
-strong {
     display: block;
     float: left;
-    width: 60px;
-}
-.footer {
-    width: 880px;
-    height:auto;
+    width: 160px;
     padding: 10px;
-    background-color: #000;
+    height: auto;
+    text-align: center;
+    margin: 0;
+    background-color: rgb(26, 26, 26);
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-weight: bold;
+}
+.slider {
+    width: 100%;
+    height: auto;
+    clear: both;
+    overflow: hidden;
+}
+.slide {
+    width: 500%;
+    height: auto;
+    animation: slideshow 30s ease-in-out infinite;
+    position: relative;
+    left: 0;
+}
+.slide img {
+    width: 20%;
+    height: auto;
+    float: left;
+}
+@keyframes slideshow {
+    0% {left: 0}
+    20% {left: 0}
+    25% {left: -100%}
+    45% {left: -100%}
+    50% {left: -200%}
+    70% {left: -200%}
+    75% {left: -300%}
+    95% {left: -300%}
+    100% {left: -400%}
+}
+section {
     clear: both;
 }
-.footer p {
-    color: #fff;
-    text-align: center
+section h2 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    clear: both;
+}
+section.boxes div {
+    background-color: white;
+    width: 260px;
+    height: 280px;
+    float: left;
+    padding: 10px;
+    margin-left: 14px;
+    border-radius: 5px;
+    border: 1px dotted darkorange;
+}
+section.boxes div h3 {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: darkorange;
+}
+section.boxes div p {
+    text-align: justify;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.content {
+    clear: both;
+    width: 640px
+}
+.content h2 {
+    padding-top: 30px
+}
+article {
+    width: 600px;
+    height: auto;
+    background-color: white;
+    border: 1px dotted darkorange;
+    padding: 20px;
+}
+article h3 {
+    color: darkorange;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+article p {
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.fade {
+    width: 400px;
+    height: 250px;
+    position: relative;
+    margin: 0 auto;
+    border: 15px solid rgb(255, 255, 255);
+    box-shadow: 0 0 5px grey;
+    border-radius: 10px;
+}
+.fade img {
+    position: absolute;
+    left: 0;
+    animation: fadein 12s alternate infinite ease-in-out;
+    border-radius: 6px;
+}
+@keyframes fadein {
+    0% {opacity: 1;}
+    15% {opacity: 1;}
+    20% {opacity: 0;}
+    80% {opacity: 0;}
+    85% {opacity: 1;}
+    100% {opacity: 1;}
+}
+.fade img:nth-of-type(1) {
+    animation-delay: 9s
+}
+.fade img:nth-of-type(2) {
+    animation-delay: 6s
+}
+.fade img:nth-of-type(3) {
+    animation-delay: 3s
+}
+.fade img:nth-of-type(4) {
+    animation-delay: 0s;
 }
