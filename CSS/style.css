@@ -103,7 +103,8 @@ section.boxes div p {
 .content {
     clear: both;
     width: 640px;
-    float: left
+    float: left;
+    margin-bottom: 50px
 }
 article {
     width: 600px;
@@ -176,4 +177,15 @@ form {
     width: 230px;
     height: auto;
     margin-left: 18px;
+}
+footer {
+    width: 100%;
+    height: auto;
+    background-color: darkorange;
+    text-align: center;
+    clear: both;
+    margin-top: 20px;
+}
+footer p {
+    padding: 15px;
 }
